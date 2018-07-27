@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 
@@ -16,7 +13,7 @@ namespace Sso.MySsoApp.Controllers
             {
                 return RedirectToAction("Index", "Home");
             }
-
+            Console.WriteLine(Response.RedirectLocation);
             ViewBag.ReturnUrl = returnUrl;
             return View();
         }
@@ -26,7 +23,6 @@ namespace Sso.MySsoApp.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Login(string username, string password, string returnUrl)
         {
-           // if(Membership.ValidateUser(username, password))
                 if (FormsAuthentication.Authenticate(username, password))
                 {
                     FormsAuthentication.SetAuthCookie(username, false);
