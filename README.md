@@ -4,7 +4,7 @@
 2. Compile in Visual Studio (2017 preffered)
 3. Run the Sso.MyAppOne 
     + Observe that it will redirect to the Sso.MySso for login
-    + username and password for login is 'demo'
+    + username and password for login is 'demo' and 'password' respectively
  4. After successful login
     + Observe that it will redirect to MyAppOne
  5. Run MyApp2
